@@ -1,0 +1,17 @@
+language: elixir
+
+before_install:
+ - sudo apt-get -qq update
+ - sudo apt-get install -y graphviz
+
+matrix:
+  include:
+    - otp_release: 19.2
+      elixir: 1.4.5
+    - otp_release: 19.2
+      elixir: 1.5.1
+    - otp_release: 20.0
+      elixir: 1.6.0
+
+script:
+  - "MIX_ENV=test mix do deps.get, credo, coveralls.travis"
