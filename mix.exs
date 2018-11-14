@@ -13,6 +13,13 @@ defmodule Opus.Graph.MixProject do
       package: package(),
       description: description(),
       deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ],
       docs: [
         extras: ["README.md"],
         main: "readme",
@@ -33,6 +40,7 @@ defmodule Opus.Graph.MixProject do
       {:graphvix, "~> 0.5"},
       {:credo, "~> 0.8.10", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.18", only: :dev},
+      {:excoveralls, "~> 0.8", only: :test}
     ]
   end
 
