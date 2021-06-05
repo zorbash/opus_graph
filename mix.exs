@@ -39,7 +39,7 @@ defmodule Opus.Graph.MixProject do
       {:opus, ">= 0.5.1"},
       {:graphvix, "~> 0.5"},
       {:credo, "~> 0.8.10", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.18", only: :dev},
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false},
       {:excoveralls, "~> 0.8", only: :test}
     ]
   end
