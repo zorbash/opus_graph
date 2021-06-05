@@ -67,7 +67,7 @@ defmodule Opus.GraphTest do
   describe "generate/2 with a custom filename" do
     setup do
       filename = "some_amazing_app"
-      Path.wildcard("#{filename}.*") |> File.rm()
+      "#{filename}.*" |> Path.wildcard() |> File.rm()
 
       {:ok, %{filename: filename}}
     end

@@ -17,7 +17,8 @@ defmodule Opus.Graph do
           step: "#73C6B6",
           link: "#C39BD3",
           check: "#7FB3D5",
-          tee: "#A6ACAF"
+          tee: "#A6ACAF",
+          skip: "#8B80FF"
         },
         edges: %{
           link: "purple",
